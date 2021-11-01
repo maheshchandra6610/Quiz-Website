@@ -1,0 +1,175 @@
+<html>
+
+<head>
+
+<title>Quiz Questions And Answers</title>
+
+</head>
+
+<body>
+	<link rel="stylesheet" type="text/css" href="css/style3.css">
+	<link href="https://fonts.googleapis.com/css?family=Flamenco&display=swap" rel="stylesheet">
+<div class="header1">
+<p>
+
+<form name="quiz">
+<div class="header2">
+
+</div>
+</p></div>
+
+
+<div class="qone">
+<p>
+
+<b><br>1) What is the biggest planet in our solar system?<br></b>
+
+<blockquote>
+
+<pre>	<input type="radio" name="q1" value="Jupiter">Jupiter
+	<input type="radio" name="q1" value="Saturn">Saturn
+	<input type="radio" name="q1" value="Earth">Earth</pre>
+
+</blockquote>
+
+</p></div>
+<div class="qtwo">
+<p><b>
+
+<br>2) How many bones are there in an adult human body?</b></b>
+
+<blockquote>
+
+<pre>	<input type="radio" name="q2" value="36">36
+	<input type="radio" name="q2" value="206">206
+	<input type="radio" name="q2" value="372">372</pre>
+
+</blockquote>
+</p></div>
+<div class="qthree">
+
+<p><b>
+
+<br>3) Human blood is always which color?<br></b>
+
+<blockquote>
+
+<pre>	<input type="radio" name="q3" value="Blue">Blue
+	<input type="radio" name="q3" value="Red">Red
+	<input type="radio" name="q3" value="Black">Black</pre>
+
+</blockquote>
+</p></div>
+<div class="qfour">
+
+<p><b>
+
+<br>4) Bats are ______.<br></b>
+
+<blockquote>
+
+<pre>	<input type="radio" name="q4" value="Mammals">Mammals
+	<input type="radio" name="q4" value="Birds">Birds
+	<input type="radio" name="q4" value="Insects">Insects</pre>
+
+</blockquote>
+</p></div>
+<div class="qfive">
+
+<p><b>
+<br>5) What is the name of the biggest part of the human brain?<br></b>
+
+<blockquote>
+
+<pre>	<input type="radio" name="q5" value="Medula oblongata">Medula oblongata
+	<input type="radio" name="q5" value="Cerebullum">Cerebullum
+	<input type="radio" name="q5" value="Cerebrum">Cerebrum</pre>
+
+</blockquote>
+
+</p></div>
+
+<center>
+<pre><br><input type="button"value="Grade Me"onClick="getScore(this.form);">	<input type="reset" value="Clear"></p>
+
+	Number of score out of 5 = <input type= text size 5 name= "mark"><br>
+Score in percentage = <input type=text size=5 name="percentage"><br><br></pre>
+</center>
+</form>
+
+<p>
+
+<form method="post" name="Form" onsubmit="" action="">
+
+</form>
+</body>
+</p>
+	
+</body>
+
+<script>
+
+var numQues = 5;
+
+var numChoi = 3;
+
+var answers = new Array(5);
+
+answers[0] = "Jupiter";
+
+answers[1] = "206";
+
+answers[2] = "Red";
+
+answers[3] = "Mammals";
+
+answers[4] = "Cerebrum";
+
+
+function getScore(form) {
+
+var score = 0;
+
+var currElt;
+
+var currSelection;
+
+for (i=0; i<numQues; i++) {
+
+currElt = i*numChoi;
+
+answered=false;
+
+for (j=0; j<numChoi; j++) {
+
+currSelection = form.elements[currElt + j];
+
+if (currSelection.checked) {
+
+answered=true;
+
+if (currSelection.value == answers[i]) {
+
+score++;
+
+break;
+
+}
+
+}
+
+}
+
+if (answered ===false){alert("Do answer all the questions, Please") ;return false;}
+
+}
+
+var scoreper = Math.round(score/numQues*100);
+
+form.percentage.value = scoreper + "%";
+
+form.mark.value=score;
+
+}
+
+</script>

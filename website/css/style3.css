@@ -1,0 +1,208 @@
+*{
+	margin: 0px;
+	padding: 0px;
+	box-sizing: border-box;
+}
+
+body{
+	font-size: 20px;
+	color: black;
+	overflow-x: hidden;
+	font-family: 'Flamenco', cursive;
+	background-color: #FF4C4C;
+}
+
+.main-nav li a{
+	padding: 5px 0;
+	color: #fff;
+	text-decoration: none;
+	text-transform: uppercase;
+	font-size: 90%;
+	font-weight: 100;
+
+}
+
+.main-nav li{
+	display: inline-block;
+	list-style: none;
+	margin-left: 40px;
+}
+
+
+.main-nav{
+	float: right;
+	margin-top: 60px;
+}
+
+.logo{
+	height: 120px;
+	width: auto;
+	float: left;
+	margin-top: 20px;
+}
+
+
+.clearfix:after{
+	content: ".";
+	visibility: hidden;
+	display: block;
+	height: 0px;
+	clear: both;
+}
+
+.row{
+	max-width: 1180px;
+	margin: 0 auto;
+}
+
+.main-nav li a:hover{
+	border-bottom: 2px solid white;
+}
+
+header{;
+    background-color: #FF0000;
+	background-size: cover;
+	background-repeat: no-repeat;
+	height: 100vh;
+}
+
+.header {
+  padding: 45px;
+  text-align: center;
+}
+
+/* Style the top navigation bar */
+.topnav {
+  overflow: hidden;
+  background-color: #333;
+}
+
+/* Style the topnav links */
+.topnav a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+
+/* Create three equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 50%;
+  padding: 15px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+@media screen and (max-width:600px) {
+  .column {
+    width: 100%;
+  }
+}
+.btn{
+	display: inline-block;
+	padding: 40px 30px;
+	font-weight: lighter;
+	text-decoration: none;
+	text-transform: uppercase;
+	border-radius: 300px;
+	transition: background-color 0.2s, border 0.2s, color 0.2;
+}
+
+.btn-full{
+	background-color: transparent;
+	color: white;
+	margin-right: 15px
+}
+
+.btn-full:hover{
+	background-color: white;
+}
+.btn-nav{
+	background-color: transparent;
+	padding: 40px;
+	color: #fff;
+	margin-right: 15px;
+}
+
+.btn-nav:hover{
+	background-color: white;
+}
+
+
+* {
+  box-sizing: border-box;
+}
+
+.zoom {
+  padding: 50px;
+  transition: transform .2s;
+  width: 350px;
+  height: 400px;
+  margin: 0 auto;
+   border: 10px solid red;
+}
+
+.zoom:hover {
+  -ms-transform: scale(1.25); /* IE 9 */
+  -webkit-transform: scale(1.25); /* Safari 3-8 */
+  transform: scale(1.25); 
+}
+.button {
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+.button2 {
+	background-color: #f44336;
+}
+
+.header1 {
+  padding: 0px 10px;
+  text-align: left;
+  margin: 0px;
+  border: 0px;
+
+}
+
+.qone {
+	padding-left: 100px;
+	background-color: white;
+}
+
+.qtwo {
+	padding-left: 100px;
+	background-color: #FF4C4C;
+}
+
+.qthree {
+	padding-left: 100px;
+	background-color: white;
+}
+
+.qfour {
+	padding-left: 100px;
+	background-color: #FF4C4C;
+}
+
+.qfive {
+	padding-left: 100px;
+	background-color: white;
+}

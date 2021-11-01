@@ -1,0 +1,175 @@
+<html>
+
+<head>
+
+<title>Quiz Questions And Answers</title>
+
+</head>
+
+<body>
+	<link rel="stylesheet" type="text/css" href="css/style3.css">
+	<link href="https://fonts.googleapis.com/css?family=Flamenco&display=swap" rel="stylesheet">
+<div class="header1">
+<p>
+
+<form name="quiz">
+<div class="header2">
+
+</div>
+</p></div>
+
+
+<div class="qone">
+<p>
+
+<b><br>1) How many players are there in an ice hockey team?<br></b>
+
+<blockquote>
+
+<pre>	<input type="radio" name="q1" value="11">11
+	<input type="radio" name="q1" value="6">6
+	<input type="radio" name="q1" value="5">5</pre>
+
+</blockquote>
+
+</p></div>
+<div class="qtwo">
+<p><b>
+
+<br>2) Which instrument is used for measuring wind speed?</b></b>
+
+<blockquote>
+
+<pre>	<input type="radio" name="q2" value="Windometer">Windometer
+	<input type="radio" name="q2" value="Anemometer">Anemometer
+	<input type="radio" name="q2" value="Rain guage">Rain guage</pre>
+
+</blockquote>
+</p></div>
+<div class="qthree">
+
+<p><b>
+
+<br>3) How many straight edges does a cube have?<br></b>
+
+<blockquote>
+
+<pre>	<input type="radio" name="q3" value="12">12
+	<input type="radio" name="q3" value="comes">10
+	<input type="radio" name="q3" value="coming">6</pre>
+
+</blockquote>
+</p></div>
+<div class="qfour">
+
+<p><b>
+
+<br>4) What kind of weapon is a falchion?<br></b>
+
+<blockquote>
+
+<pre>	<input type="radio" name="q4" value="Sword">Sword
+	<input type="radio" name="q4" value="isn't">Axe
+	<input type="radio" name="q4" value="don't">Spear</pre>
+
+</blockquote>
+</p></div>
+<div class="qfive">
+
+<p><b>
+<br>5) What color is a Himalayan poppy<br></b>
+
+<blockquote>
+
+<pre>	<input type="radio" name="q5" value="don't make">Red
+	<input type="radio" name="q5" value="doesn't makes">White
+	<input type="radio" name="q5" value="Blue">Blue</pre>
+
+</blockquote>
+
+</p></div>
+
+<center>
+<pre><br><input type="button"value="Grade Me"onClick="getScore(this.form);">	<input type="reset" value="Clear"></p>
+
+	Number of score out of 5 = <input type= text size 5 name= "mark"><br>
+Score in percentage = <input type=text size=5 name="percentage"><br><br></pre>
+</center>
+</form>
+
+<p>
+
+<form method="post" name="Form" onsubmit="" action="">
+
+</form>
+</body>
+</p>
+	
+</body>
+
+<script>
+
+var numQues = 5;
+
+var numChoi = 3;
+
+var answers = new Array(5);
+
+answers[0] = "6";
+
+answers[1] = "Anemometer";
+
+answers[2] = "12";
+
+answers[3] = "Sword";
+
+answers[4] = "Blue";
+
+
+function getScore(form) {
+
+var score = 0;
+
+var currElt;
+
+var currSelection;
+
+for (i=0; i<numQues; i++) {
+
+currElt = i*numChoi;
+
+answered=false;
+
+for (j=0; j<numChoi; j++) {
+
+currSelection = form.elements[currElt + j];
+
+if (currSelection.checked) {
+
+answered=true;
+
+if (currSelection.value == answers[i]) {
+
+score++;
+
+break;
+
+}
+
+}
+
+}
+
+if (answered ===false){alert("Do answer all the questions, Please") ;return false;}
+
+}
+
+var scoreper = Math.round(score/numQues*100);
+
+form.percentage.value = scoreper + "%";
+
+form.mark.value=score;
+
+}
+
+</script>
